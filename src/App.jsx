@@ -18,7 +18,7 @@ function App() {
       </div>
 
       <div className='apresentacao'>
-        <h1>GUSTAVO H. SANTANA H
+        <h1>GUSTAVO H. SANTANA
           <h2>&quot;Este espaço foi criado para compartilhar minha <br />trajetória, habilidades 
             e projetos. Sinta-se à vontade <br />para explorar e conhecer mais sobre mim!&quot;</h2>
         </h1>
