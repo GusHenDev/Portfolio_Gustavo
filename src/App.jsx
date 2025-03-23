@@ -1,5 +1,6 @@
 import './App.css'
 import Foto from './assets/Foto.jpg'
+import ThemeToggle from "./components/ThemeToggle";
 
 function App() {
 
@@ -13,17 +14,18 @@ function App() {
           <button>EXPERIÊNCIAS</button>
           <button>HABILIDADES</button>
           <button>PROJETOS</button>
-          <button>CONTATO</button>
+          <button>CONTATO</button>          
+          
         </div>
-      </div>
-
+      </div>      
       <div className='apresentacao'>
-        <h1>GUSTAVO H. SANTANA H
+        <h1>GUSTAVO H. SANTANA
           <h2>&quot;Este espaço foi criado para compartilhar minha <br />trajetória, habilidades 
             e projetos. Sinta-se à vontade <br />para explorar e conhecer mais sobre mim!&quot;</h2>
         </h1>
 
       </div>
+      <ThemeToggle />
       <div className='sobre'>
         <h1>&quot;Aprendo programação a alguns anos e realizo trabalhos independentes na área,
           deste modo, também busco oportunidades de trabalho no ramo tecnológico para

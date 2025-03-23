@@ -2,7 +2,7 @@
   display: flex;
   position: fixed;
   top: 0;
-  background-image: url(./assets/6446170.jpg);
+  background-image: url(./assets/Fundo2_Claro.jpg);
   background-size: cover;
   padding: 0.5vh;
   align-items: center;
@@ -10,12 +10,14 @@
   width: 100%;
   height: 9vh;
   z-index: 10;
+  transition: 2s;  
 
   & h1 {
     font-size: 3.3vh;
     font-family: "Bicubik", serif;
-    color: #fbd756;
+    color: #2f4fc5;
     cursor: default;
+    transition: 2s;
   }
 
   & .menu {
@@ -32,8 +34,9 @@
       display: flex;
       position: relative;
       height: 100%;
-      color: rgb(232, 232, 232);
+      color: rgb(0, 0, 0);
       font-size: 2vh;
+      font-weight: bold;
       line-height: 9vh;
       padding: 1vw;
       background-color: transparent;
@@ -51,7 +54,7 @@
       bottom: 0;
       width: 0;
       height: 2px;
-      background-color: #000000;
+      background-color: #ffffff;
       transition: 0.3s ease;
 
     }
@@ -63,11 +66,13 @@
     & button:hover {
       transform: scale(1.1);
       bottom: 1vh;
-      background-color: #fbd756;
+      background-color: #2f4fc5;
       font-size: 2.5vh;
       font-weight: bold;
       backdrop-filter: blur(10px);
     }
+
+
   }
 }
 
@@ -85,30 +90,49 @@
   left: 0;
   height: 7.5vh;
   z-index: -1;
-  border-bottom: solid 1vmin #fbd756;
-  box-shadow: 0px 0px 3vmin 0.5vmin #fbd756;
+  border-bottom: solid 1vmin #2f4fc5;
+  box-shadow: 0px 0px 3vmin 0.5vmin #2f4fc5;
+  transition: 2s;
 }
+
+.theme-toggle {
+    position: fixed;
+    top: 10.5vmin;
+    right: 1vmin;
+    padding: 0;
+    border-radius: 50%;
+    font-size: 4vmin;  
+    line-height: 7.5vmin; 
+    text-align: center; 
+    height: 8vmin;
+    width: 8vmin;
+    z-index: 10;
+    background-color: black;
+    transition: 0.3s;
+  }
 
 .apresentacao {
   display: flex;
   position: relative;
   width: 100vw;
   height: 100vh;
-  background-image: url(./assets/5184015.jpg);
-  background-size: cover;  
+  background-image: url(./assets/Fundo1_Claro.jpg);
+  background-size: cover;
+  transition: 0.5s;
 
   & h1 {
     position: absolute;
     font-size: 7vmin;
     top: 35vmin;
     left: 4vmin;
-    & h2{  
-      margin-top: 5vmin;  
+
+    & h2 {
+      margin-top: 5vmin;
       font-size: 3vmin;
       line-height: 4vmin;
     }
   }
-  
+
 }
 
 .sobre {
@@ -117,9 +141,10 @@
   width: 100vw;
   height: 100vh;
   align-items: center;
-  background-color: #1e1e1e;
-  box-shadow: 0px -10vmin 5vmin 1vmin #1e1e1e;
+  background-color: #e1e1e1;
+  box-shadow: 0px -10vmin 5vmin 1vmin #e1e1e1;
   background-size: cover;
+  transition: 0.3s;
 
   & h1 {
     display: flex;
@@ -128,7 +153,8 @@
     font-size: 4vmin;
     margin: 5vmin;
     line-height: 6vmin;
-    color: #787878;
+    color: #2b2b2b;
+    transition: 0.3s;
   }
 
   & img {
@@ -137,10 +163,66 @@
     min-height: 4%;
     right: 5vmin;
     border-radius: 50%;
-    background-image: linear-gradient(#fbd756,#8a7300);    
+    background-image: linear-gradient(#2f4fc5, #2f4fc5);
     background-repeat: no-repeat;
-    background-size:auto;
-    border: 0 solid #fbd75600;
-    padding: 1vmin;    
+    background-size: auto;
+    border: 0 solid #2f4fc500;
+    padding: 1vmin;
+    transition: 0.3s;
   }
+}
+
+
+/* Modo escuro */
+.dark-mode .topboard {
+  background-image: url(./assets/Fundo2_Escuro.jpg);
+
+  & h1 {
+    color: #fbd756;
+  }
+
+  & .menu {
+    & button {
+      color: rgb(232, 232, 232);
+      -webkit-mask-image: linear-gradient(to bottom, transparent 40%, black 100%);
+      mask-image: linear-gradient(to bottom, transparent 40%, black 100%);
+    }
+
+    & button::after {
+      background-color: #000000;
+    }
+
+    & button:hover {
+      background-color: #fbd756;
+    }
+  }
+}
+
+.dark-mode .topboard::before {
+  border-bottom: solid 1vmin #fbd756;
+  box-shadow: 0px 0px 3vmin 0.5vmin #fbd756;
+}
+
+
+
+.dark-mode .apresentacao {
+  background-image: url(./assets/Fundo1_Escuro.jpg);
+
+}
+
+.dark-mode .sobre {
+  background-color: #1E1E1E;
+  box-shadow: 0px -10vmin 5vmin 1vmin #1E1E1E;
+
+  & h1 {
+    color: #afafaf;
+  }
+
+  & img {
+    background-image: linear-gradient(#fbd756, #8a7300);
+    border: 0 solid #fbd75600;
+  }
+}
+.dark-mode .theme-toggle {
+  background-color: #ffffff;
 }

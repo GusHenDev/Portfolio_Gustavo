@@ -1,18 +1,81 @@
 * {
   margin: 0;
-  padding: 0;  
+  padding: 0;
   box-sizing: border-box;
-  font-family: "Microsoft Sans Serif", serif;
-  color: rgb(127, 139, 125);
+  font-family: Arial, sans-serif;
+  scroll-behavior: smooth;
+  transition: background-color 0.3s, color 0.3s;
 }
 
 body {
+  background-color: white;
+  color: black;
+}
+
+.container {
+  width: 80%;
+  margin: auto;
+  padding: 20px;
+}
+
+.navbar {
   display: flex;
-  height: 100%;
-  width: 100%; 
-  background-image: linear-gradient(45deg, #000000, #0f0c18);
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-attachment: fixed;
-  position: relative;
+  justify-content: space-between;
+  padding: 10px 20px;
+  border-bottom: 2px solid black;
+  position: fixed;
+  width: 100%;
+  background: white;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+}
+
+.navbar a {
+  text-decoration: none;
+  color: black;
+  font-weight: bold;
+  margin: 0 10px;
+}
+
+.navbar a:hover {
+  color: blue;
+}
+
+.theme-toggle {
+  background: none;
+  border: 2px solid black;
+  padding: 5px 10px;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+.section {
+  padding: 80px 0;
+  min-height: 100vh;
+  border-bottom: 2px solid black;
+}
+
+/* Modo escuro */
+.dark-mode {
+  background-color: black;
+  color: white;
+}
+
+.dark-mode .navbar {
+  background: black;
+  border-bottom: 2px solid white;
+}
+
+.dark-mode .navbar a {
+  color: white;
+}
+
+.dark-mode .navbar a:hover {
+  color: lightblue;
+}
+
+.dark-mode .theme-toggle {
+  border: 2px solid white;
+  color: white;
 }
